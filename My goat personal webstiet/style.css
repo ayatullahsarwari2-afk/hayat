@@ -1,0 +1,559 @@
+span{
+    color: blueviolet;
+}
+*{
+    color: white;
+    scroll-behavior: smooth;
+}
+body{  
+            background-color: #0a1e32;
+            margin: 20px;
+        }
+        .homy{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(36, 4, 32);
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px violet;
+        }
+        .homy:hover{
+            cursor: pointer;
+            box-shadow: 0px 0px 0px 0px;
+        }
+        .cursor{
+            z-index: 999;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.56);
+            box-shadow: 0px 0px 30px 0px white;
+        }
+        @keyframes colors{
+            from{filter: hue-rotate(0deg)}
+            to{filter: hue-rotate(360deg);}
+        }
+       .cursor::before{
+        content: '';
+        background-color: rgb(89, 7, 86);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        animation: colors 5s infinite;
+       }
+      .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        width: 100%;
+        left: 0px;
+        animation: ease-in navbar .5s;
+      }
+      @keyframes navbar{
+        from{left: -400px; position: absolute;}
+         to{left: 0px; position: fixed;}  
+    }
+      .navbar > img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0px 0px 10px 0px white;
+        margin-right: 10px;
+      }
+      .navbar > .nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 10px;
+      }
+      .navbar > .nav > li{
+        height: 100%;
+        display: flex;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
+        padding-left: 20px;
+      list-style: none;
+      }
+      .navbar > .nav > li:hover{
+        background-color: blueviolet;
+        cursor: pointer;
+        transition: all .5s ease;
+      }
+      .navbar .nav > li:active{
+        background: rgba(137, 43, 226, 0.356);
+      }
+     .navbar .nav > li > a{
+color: white;
+font-weight: bold;
+text-decoration: none;
+      }
+      .home{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+        padding-top: 130px;
+        padding-bottom: 100px;
+        flex-wrap: wrap;
+      }
+      .home > .one{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 30px;
+      }
+      .home > .one > p{
+        width: 70%;
+      }
+      .home > .one > h1{
+        margin-bottom: -10px;
+        font-size: 50px;
+      }
+      .home > .one > p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 7px;
+      }
+      .home > img{
+        margin-right: 20px;
+          height: 400px;
+          box-shadow: 0px 0px 30px 0px blueviolet;
+          width: 390px;
+         border-radius: 20px;
+          border: 2px solid blueviolet;
+      }
+      .home > img:hover{
+        transform: scale(1.1);
+        margin-right: 70px;
+        transition: all 1s ease;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px 0px blueviolet;
+      }
+      @keyframes mainpic{
+        from{}
+        to{margin-right: 40; height: 430px; width: 400px;}
+      }
+      .home > .one > .o1{
+        display: FLEX;
+        gap: 10PX;
+      }
+            .home > .one > .o1 > a::after{
+        content: '';
+        border-radius: 10px;
+        transition: all .9s ease;
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: linear-gradient(to left,blueviolet,violet);
+      }
+      .home > .one > .o1 > a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 150px;
+        height: 39px;
+        background: blueviolet;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        position: relative;
+        z-index: 0;
+      }
+      .home > .one > .o1 > a:hover::after{
+        width: 100%;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px 0px blueviolet;
+      }
+      .enjoy{
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 180px;
+      }
+      .enjoy > .one{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 400px;
+        border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         flex-direction: column;
+        height: 400px;
+        background: linear-gradient(to left,rgb(43, 21, 63));
+      }
+      .enjoy > .one:hover{
+        color: blueviolet;
+        box-shadow: 0px 0px 20px 0px blueviolet;
+        cursor: pointer;
+      }
+      .enjoy > .one > img{
+        width: 110px;
+        margin-top: -150px;
+        height: 110px;
+        border-radius: 50%;
+        border: 2px solid blueviolet;
+        box-shadow: 0px 0px 10px 0px blueviolet;
+      }
+      .skill{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        gap: 10px;
+      }
+      .skill > .one{
+        width: max-content;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: flex-start;
+        height: max-content;
+        background-color: rgb(39, 18, 59);
+        border: 2px solid blueviolet;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .skill > .one > p{
+        width: 400px;
+      }
+      .skill > .one:hover{
+        box-shadow: 0px 0px 20px 0px blueviolet;
+        cursor: pointer;
+      }
+      .skill > .one > h1{
+        margin-bottom: -10;
+      }
+      .skill > .one > img{
+    width: 300px;
+        height: 200px;
+        border-radius: 20px;
+      }
+      .skill > .one a{
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background: #0a1e32;
+        color: white;
+        font-weight: bold;
+        height: 38px;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      .sport{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        gap: 50px;
+      }
+      .sport > .sport1{
+        display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      }
+      .sport1 > img{
+        height: 500px;
+        width: 600px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px blueviolet;
+      }
+      .sport1 > .one{
+        width: 40%;
+      }
+      .sport1 > .one > h1{
+        font-size: 50px;
+        margin-bottom: -10px;
+      }
+      .mc{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-bottom-left-radius: 7px;
+        display: none;
+      }
+      .mc:hover{
+        background: rgb(47, 15, 77);
+      }
+      .mc:active{
+        background-color: rgba(55, 17, 90, 0.699);
+      }
+      .sport1 > .one > p{
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.575);
+      }
+      .media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: max-content;
+        margin-top: 100px;
+        gap: 10px;
+      }
+      .media > .one{
+        background: linear-gradient(to left,rgb(60, 12, 105),rgb(77, 9, 77));
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      .media > .one > img{
+        width: 120px;
+        border-radius: 10px;
+        margin-top: -100px;
+        height: 120px;
+      }
+      .media .one a{
+        background: blueviolet;
+        padding: 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .media > .one > a:hover{
+        box-shadow: 0px 0px 20px 0px violet;
+        cursor: pointer;
+      }
+      .contact{
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+       margin-bottom: 20px;  
+    }
+      .contact > .one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        gap: 20px;
+        background: linear-gradient(to left,rgb(33, 12, 53),rgb(36, 7, 36));
+        padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .contact > .one input{
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        background: blueviolet;
+      }
+      .contact > .one button:Hover{
+        box-shadow: 0px 0px 20px 0px blueviolet;
+        cursor: pointer;
+      }
+      .contact> .one textarea{
+        background-color: blueviolet;
+        border-radius: 5px;
+      }
+      .contact > .one button{
+        width: 50%;
+        height: 40px;
+        background-color: blueviolet;
+        font-weight: bold;
+        border-radius: 5px;
+       border: 0px;
+    }
+    .contact > .one button:active{
+        background: rgba(68, 6, 126, 0.644);
+    }
+      input::placeholder{
+        color: white;
+      }
+      .contact > .two{
+        width: 500px;
+        font-size: 18px;
+      }
+       .contact > .two h1{
+        font-size: 50px;
+       }    
+       @media screen and (max-width: 900px)
+       {
+        .home{
+            padding-top: 50px;
+            gap: 50px;
+            text-align: center;
+        }
+        .home > .one{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .home > img{
+            margin: 0px;
+        }
+        .sport1{
+            gap: 20px;
+        }
+        .sport > .sport1 > .one{
+            width: 100%;
+        }
+        .contact > .two h1{
+            margin-bottom: -10px;
+        }
+        .contact > .two{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+       }
+       @media screen and (max-width: 500px)
+       {
+        body{
+            margin: 0px;
+        }
+        h1{
+           font-size: 30px;
+        }
+        p{
+            font-size: 15px;
+        }
+        .sport1 > .one > h1{
+            font-size: 30px;
+        }
+        .contact > .two > h1{
+            font-size: 30px;
+        }
+       .home > .one{
+    padding: 0px;
+    margin:0px;
+       }
+        .home > .one > h1{
+            font-size: 30px;
+        }
+        .home > .one p{
+            font-size: 15px;
+        }
+        .home > .one .o1 a{
+            width: 100px;
+            font-size: 11px;
+            height: 30px;
+        }
+        .home > img{
+            width: 200px;
+            height: 200px;
+        }
+        .enjoy,.skill{
+            gap: 50px;
+        }
+        .skill > .one p{
+            width: 100%;
+        }
+       
+        .enjoy > .one,.skill>.one,.media > .one{
+            width: 250px;
+            height: 350px;
+        }
+        .media > .one{
+            height: 300px;
+        }
+         .skill .one{
+            height: 500px;
+        }
+        .skill > .one img{
+            width: 100%;
+        }
+        .sport1{
+            width: 250px;
+        }
+        .sport1 > img{
+            width: 250px;
+            height: 350px;
+        }
+        .contact > .two{
+            width: 250px;
+        }
+        .contact > .one{
+            width: 200px;
+        }
+        .contact > form > textarea{
+            width: 100%;
+        }
+        .enjoy{
+            margin-top: 50px;
+        }
+      
+        .skill > .one > button{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .skill > .one{
+            padding-bottom: 50px;
+        }
+        .navbar{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(9, 8, 10, 0.507);
+            flex-direction: column;
+            margin: 0px;
+            justify-content: center;
+            z-index: 995;
+        }
+        .navbar > img{
+            display: none;
+        }
+        .navbar > .nav{
+            flex-direction: column;
+            width: 100%;
+            height: max-content;
+        }
+        .nav > li:hover{
+            background: rgba(137, 43, 226, 0.795);
+        }
+      .navbar  .nav > li{
+            height: 50px;
+            width: 100%;
+        }
+        .mc{
+            display: flex;
+        }
+       }
